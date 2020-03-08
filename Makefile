@@ -752,6 +752,7 @@ combine: u-boot.bin spl/u-boot-spl.bin FORCE
 	cat $(objtree)/u-boot.bin >> $(objtree)/tmp.bin
 	cp $(objtree)/tmp.bin $(objtree)/u-boot-a.bin
 	cp $(objtree)/u-boot-a.bin /mnt/hgfs/share_folder/
+	cp $(objtree)/u-boot-a.bin ~/work/net_share/tftp_root/u-boot.bin
 
 PHONY += dtbs
 dtbs dts/dt.dtb: checkdtc u-boot
